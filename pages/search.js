@@ -3,11 +3,12 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/map";
+import Head from "next/head";
 
 function Search({ searchResults }) {
   const router = useRouter();
 
-  console.log(searchResults);
   //ES6 Destructuring
   const { location, startDate, endDate, numberGuest } = router.query;
 
@@ -17,6 +18,12 @@ function Search({ searchResults }) {
 
   return (
     <div>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
+      </Head>
       <Header placeholder={`${location} | ${range} | ${numberGuest} guests`} />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
@@ -49,6 +56,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />
