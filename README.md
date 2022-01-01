@@ -1,10 +1,11 @@
-## Getting Started
+## Intro
+- I followed papareact airbnb course papareact.com/course. I used react,next.js,tailwind CSS
+also for searching used calendarPicker and mapbox
 
-First, run the development server:
+- This homepage need to fix to a lot of thins. so I'll fix someting and upgrade
 
-```bash
-$npm install
-$npm run dev
-```
+## How to Start
+- click this link 
+https://airbnb-react-challenge-4h80d43r3-hhhminme.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- git clone and ```npm run dev```
